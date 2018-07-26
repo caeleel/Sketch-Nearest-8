@@ -6,8 +6,8 @@
 
 */
 
-var onRun = function (context) { 
-  var selection = context.selection, 
+var onRun = function (context) {
+  var selection = context.selection,
     doc = context.document,
     layer = selection[0],
     frame = [layer frame],
@@ -16,10 +16,9 @@ var onRun = function (context) {
 
     if (height % 8 === 0) {
     log("true");
-    height = height + 8;
     } else {
     log("false");
-    height = Math.ceil(height/8.0) * 8;
+    height = Math.round(height/8.0) * 8;
     }
 
 

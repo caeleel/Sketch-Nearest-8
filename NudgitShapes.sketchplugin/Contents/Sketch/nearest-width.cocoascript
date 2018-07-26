@@ -6,7 +6,7 @@
 
 */
 
-var onRun = function (context) { 
+var onRun = function (context) {
   var selection = context.selection,
     doc = context.document,
     layer = selection[0],
@@ -16,10 +16,9 @@ var onRun = function (context) {
 
     if (width % 8 === 0) {
     log("true");
-    width = width + 8;
     } else {
     log("false");
-    width = Math.ceil(width/8.0) * 8;
+    width = Math.round(width/8.0) * 8;
     }
 
 
